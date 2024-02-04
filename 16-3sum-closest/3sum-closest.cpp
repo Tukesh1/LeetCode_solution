@@ -8,8 +8,10 @@ public:
         for(int i =0 ;i<nums.size()-2;i++){
             int low = i+1 ;
             int high = nums.size()-1 ;
+           // cout<<high<<endl;
             while(low < high){
-                int sum = nums[i] + nums[low]+ nums[high];
+                int sum = nums[i] + nums[low]+ nums[high];// one num is fixed 
+                //we are searching for the other two number now 
                 if(sum == target){
                     return target;
                 }
@@ -19,10 +21,11 @@ public:
                 else{
                     high--;
                 }
-                int DiffToTarget = abs(sum - target);
-                if(DiffToTarget < minDiff){
+
+                int Diff_to_Target = abs(sum - target);
+                if(Diff_to_Target < minDiff){
                  resultSum = sum ;
-                 minDiff = DiffToTarget;
+                 minDiff = Diff_to_Target;
                 }
                
             }
