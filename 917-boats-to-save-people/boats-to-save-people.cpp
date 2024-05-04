@@ -5,8 +5,7 @@ public:
         // 3 2 2 1 => 1 2 2 3
         int cnt =0 ;
         int j = people.size()-1;
-        int i =0 ;
-        
+        int i =0 ;     
         while(i<= j){
             if((people[i] + people[j]) <= limit ){
                 i++;
