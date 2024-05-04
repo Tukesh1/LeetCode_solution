@@ -6,6 +6,7 @@ public:
         int cnt =0 ;
         int j = people.size()-1;
         int i =0 ;
+        
         while(i<= j){
             if((people[i] + people[j]) <= limit ){
                 i++;
