@@ -3,7 +3,6 @@ public:
     int matrixScore(vector<vector<int>>& grid) {
         int n = grid.size(), m = grid[0].size();
         int res = (1 << (m - 1)) * n;
-          cout<<res<<endl;
         for(int j = 1; j < m; ++j) {
             int val = 1 << (m - 1 - j);
             int set = 0;
