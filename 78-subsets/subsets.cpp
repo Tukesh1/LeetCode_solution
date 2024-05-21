@@ -6,6 +6,7 @@ public:
             v.push_back(subset);
             return ;
         }
+        // dont take 
         solve(i+1, nums,subset);
         //take
         subset.push_back(nums[i]);
