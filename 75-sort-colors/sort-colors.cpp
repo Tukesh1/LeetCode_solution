@@ -1,23 +1,8 @@
 class Solution {
 public:
     void sortColors(vector<int>& nums) {
-       int mid= 0;
-       int low = 0,high = nums.size()-1;
-       while(mid <= high){
-          if(nums[mid] == 0){
-            swap(nums[mid], nums[low]);
-            low++;
-            mid++;
-          }
-          else if(nums[mid] == 1){
-            mid++;
-          }
-          else{
-            // nums[mid] == 2
-            swap(nums[mid] , nums[high]);
-            high--;
-
-          }
-       }
+        //We will use the integers 0, 1, and 2 to represent the color red, white, and blue, respectively.
+       sort(nums.begin(), nums.end());
+    
     }
 };
