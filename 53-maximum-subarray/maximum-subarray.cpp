@@ -1,14 +1,15 @@
 class Solution {
 public:
     int maxSubArray(vector<int>& nums) {
-        // largest sum  
-        int sum =0 ;
-        int ans =nums[0] ;
-        for(int i=0 ;i< nums.size();i++){
-            sum += nums[i];
-            ans = max(ans, sum);
-            if(sum < 0) sum =0 ;
+        // kadens algorithm 
+        int ans=INT_MIN;
+        int sum =0;
+
+        for(int i =0 ;i<nums.size();i++){
+                sum +=nums[i];
+                ans = max(ans,sum);
+                if(sum <0) sum =0 ;
         }
-        return ans;
+            return ans;
     }
 };
