@@ -15,9 +15,9 @@ public:
         // base case 
         if(root == nullptr) return 0;
         int lh = maxDepth(root->left);
-          int rh = maxDepth(root->right);
+        int rh = maxDepth(root->right);
 
           return max(lh, rh)+1;
-          
+
     }
 };
