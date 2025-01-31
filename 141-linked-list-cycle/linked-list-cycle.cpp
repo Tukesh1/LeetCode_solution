@@ -8,16 +8,16 @@
  */
 class Solution {
 public:
-    bool hasCycle(ListNode* head) {
-        if (head == NULL)
-            return false;
-        map<ListNode*, bool> visited;
-        ListNode* temp = head;
-        while (temp->next != NULL) {
-            if (visited[temp] == true) {
+    bool hasCycle(ListNode *head) {
+        //cycle detection in ll
+        // using hashmap
+        unordered_map<ListNode*, bool>visited;
+        ListNode *temp = head;
+        while(temp != NULL){
+            if(visited[temp]== true){
                 return true;
             }
-            visited[temp] = true;
+            visited[temp]= true;
             temp = temp->next;
         }
         return false;
