@@ -16,6 +16,7 @@ public:
             prod = nums[i] * prod;
             right[i] = prod;
         }
+        for(int i=0;i<n;i++) cout<<right[i]<<" ";
         // right = [24,12,8,6]
         // res[0] = right[1]; res[n - 1] = left[n - 2]; for(I = 1 to n-1
         // )res[i]= left[i-1]*right[i+1]
